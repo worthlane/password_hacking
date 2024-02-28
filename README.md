@@ -4,7 +4,7 @@ My friend made a program, that imitates password checking and access for some da
 
 ## First weakness (easier one) "god mode"
 
-First of all I tried to analyse program structure.
+First of all I tried to analyze program structure.
 
 ![](https://github.com/worthlane/password_hacking/blob/main/img/main.jpg)
 
@@ -36,7 +36,15 @@ What is this command doing? And why is it using commang line arguments adress (0
 
 ![](https://github.com/worthlane/password_hacking/blob/main/img/success.jpg)
 
-I'm sure that this password is not the correct one, but we've passed verification and got permission.
+I'm sure that this password is not the correct one, but we passed verification and got the permission.
+
+## Second weakness (harder one) "buffer overflow"
+
+In the beginning I noticed, that we have in fact this program works by calling two important functions. We already know that procedure 000B is deciding to give us access or not, so, obviously, second important procedure (0029) reads input from keyboard. Let's find something interesting there:
+
+
+
+
 
 ## Cracking
 
