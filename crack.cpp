@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-static const char* ORIGIN_PROG  = "PASSWORD.com";
+static const char* ORIGIN_PROG  = "PASSWORD.COM";
 static const char* CRACKED_PROG = "crack.com";
 
 static const int   NOP          = 144;
