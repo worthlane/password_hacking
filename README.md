@@ -1,12 +1,12 @@
 # password_hacking
 
-I am trying to access a friend's program, but it asks me for a password that I do not know.
+I am trying to access a friend's program, but it asks me for a password that I do not know💀
 
 ![](https://github.com/worthlane/password_hacking/blob/main/img/deny.jpg)
 
-I'm too angry, so I will hack it.
+I'm too angry, so I will hack it😈
 
-## First weakness (easier one) "god mode"
+## First vulnerability (easier one) "god mode"
 
 First of all I tried to analyze program structure.
 
@@ -25,7 +25,7 @@ Also we can see a lot of zeros. I suppose, that it can be a buffer, which contai
 &FAILURE_PROMPT = 0300h
 ```
 
-Obviously, we can find these addresses in the code. I saw them in the procedure with 000B start addres (mentioned before)
+Obviously, we can find these addresses in the code. I saw them in the procedure with 000B start address (mentioned before)
 
 ![](https://github.com/worthlane/password_hacking/blob/main/img/adrss.jpg)
 
@@ -35,13 +35,13 @@ This function calls for 0068 procedure, that pushes videomemory segment in regis
 cmp word ptr [0082], 3837   ; compare [0082] and "78"
 ```
 
-What is this command doing? And why is it using commang line arguments adress (082h). If [0082] == 78 program will always save SUCCESS_PROMPT in SI register. Let's try to enter 78 in command line:
+What does this command? And why is it using commang line arguments adress (082h). If [0082] == 78 program will always save SUCCESS_PROMPT in SI register. Let's try to enter 78 in command line:
 
 ![](https://github.com/worthlane/password_hacking/blob/main/img/success.jpg)
 
 I'm sure that this password is not the correct one, but we passed verification and got the permission.
 
-## Second weakness (harder one) "buffer overflow"
+## Second vulnerability (harder one) "buffer overflow"
 
 ### Pre-hack information
 
@@ -107,7 +107,7 @@ Now we have very long password in the file. Lets try this password by input from
 
 ## Cracking
 
-We can abuse first weakness to write program, that can crack this password system. Non-cracked program looks like:
+We can abuse first vulnerability to write program, that can crack this password system. Non-cracked program looks like:
 
 ![](https://github.com/worthlane/password_hacking/blob/main/img/noncracked.jpg)
 
